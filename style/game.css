@@ -1,0 +1,130 @@
+/* Conteiner */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 8em;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1em;
+    padding: 0 1em;
+}
+
+
+/* Player Info */
+.player-info {
+    border: solid 2px var(--second-color);
+    margin-top: 1em;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 2em repeat(8, 1fr);
+    align-items: center;
+}
+.player-info h1 {
+    background-color: var(--second-color);
+    color: var(--main-color);
+    font-size: 1em;
+    margin: 0 .2em;
+    padding: 3px 1px;
+    text-align: center;
+    border-bottom: solid 2px var(--second-color);
+    text-transform: uppercase;
+}
+.player-info label {
+    color: var(--second-color);
+    background-color: var(--second-color);
+    color: var(--main-color);
+    text-align: center;
+    align-self: start;
+    padding: .2em 0;
+}
+.player-info span {
+    color: var(--second-color);
+    padding: 0 .5em;
+    text-align: center;
+    align-self: start;
+}
+
+/* Game Content */
+.game-content {
+    border: solid 2px var(--second-color);
+    justify-self: center;
+    align-self: center;
+    height: 90%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    padding: 1em;
+    grid-row: span 2;
+}
+
+.game-content .question {
+    background-color: var(--second-color);
+    height: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 3em;
+}
+
+.game-content .cards {
+    height: 90%;
+    align-self: end;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+}
+.game-content .cards .card {
+    border: solid 1px var(--second-color);
+    color: var(--second-color);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8em;
+}
+.game-content .cards .card:hover {
+    background-color: var(--second-color);
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+/* Leaderboard */
+.leaderboard {
+    border: solid 2px var(--second-color);
+    margin-top: 1em;
+    height: 90%;
+    display: grid;
+    grid-template-rows: 2em 1fr;
+    align-items: center;
+    color: var(--second-color);
+}
+.leaderboard h1 {
+    font-size: 1em;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: var(--second-color);
+    color: var(--main-color);
+    padding: .5em 0;
+}
+.leaderboard ol {
+    color: var(--second-color);
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    height: 100%;
+    margin-left: 1.5em;
+    align-items: center;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+    .container {
+        grid-template-rows: repeat(2, 1fr);
+        padding-bottom: 3em;
+        height: 100vh;
+        row-gap: 0;
+    }
+    .game-content {
+        grid-row: span 1;
+        grid-column: span 2;
+        padding-bottom: 5em;
+    }
+}
