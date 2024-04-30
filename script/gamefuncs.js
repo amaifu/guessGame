@@ -130,11 +130,7 @@ let result = ()=> {
                 LStatIncrement();
             } else {
                 if(modeBtn.innerHTML == 'CASUAL') {
-                    alertBox[0].innerHTML = "Wrong Answer, Let's choose correct one"
-                    scaleUp(alertBox[0]);
-                    setTimeout(()=> {
-                        scaleDown(alertBox[0]);
-                    }, 1500);
+                    tempAlertBox(0, "Wrong Answer, Let's choose correct one");
                 } 
                 else {
                     playerChance--;
